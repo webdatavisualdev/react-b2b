@@ -1,0 +1,23 @@
+@import "styles";
+
+.root {
+  input {
+    padding: 15px;
+    border-radius: 3px;
+    border: solid 1px #dedede;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.17;
+    letter-spacing: normal;
+    color: $primaryColor;
+  }
+  .right {
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    z-index: 5;
+  }
+}

@@ -1,0 +1,169 @@
+@import "styles";
+
+.resultItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: solid 1px $borderGrayColor;
+@media screen and (max-width: 992px) {
+  flex-direction: column;
+}
+
+  .mainImage {
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 260px;
+    width: 260px;
+    background-size: cover;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 467px) {
+      height: auto;
+      max-height: 260px;
+    }
+  }
+
+  img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+
+
+
+
+  .right {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+
+    .circle {
+      position: absolute;
+      left: -25px;
+      top: 70px;
+      height: 50px;
+      width: 50px;
+      background-color: $primaryColor;
+      border-radius: 50%;
+      display: inline-block;
+      border: 2px solid white;
+    @media screen and (max-width:992px) {
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+      > svg {
+        position: relative;
+        left: 8px;
+        top: 12.5px;
+      }
+    }
+
+    .content {
+      height: 100%;
+      padding: 30px 40px;
+      overflow: hidden;
+      @media screen and (max-width:767px) {
+        padding: 16px;
+        margin-top: 15px;
+      }
+      .line {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 300;
+        @media screen and (max-width:767px) {
+          flex-direction: column;
+          h3 {
+            font-size: 18px !important;
+            text-align: center;
+            font-weight: bold !important;
+            color: #7b7c7e;
+
+          }
+        }
+
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+        .itemName {
+          font-weight: 300;
+          font-size: 24px;
+        }
+        .rateInfo {
+          display: flex;
+          flex-direction: column;
+          @media screen and (max-width: 767px){
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            .flex-vertical-center,  .itemRate {
+              font-size: 16px !important;
+              color: $primaryColor !important;
+            }
+            span{
+
+              color: #003398;
+            }
+          }
+          .itemRate {
+            margin-left: 8px;
+            color: $primaryColor;
+            font-size: 20px;
+            font-weight: bold;
+          }
+          .taxesAndFees {
+            display: flex;
+            flex-direction: row;
+            text-align: right;
+            > :not(:first-child) {
+              margin-left: 8px;
+            }
+            .infoIcon {
+              cursor: pointer;
+            }
+          }
+        }
+        .description {
+          font-size: 14px;
+          font-weight: bold;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-height: 44px;
+        }
+        .actions {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          margin-left: 10px;
+          @media screen and (max-width: 767px) {
+            justify-content: space-between;
+            margin-left: 0;
+            display: flex;
+            width: 100%;
+            margin: 10px 0;
+          }
+
+          > :not(:first-child) {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .baseline {
+        align-items: flex-start;
+      }
+
+      .rating {
+        width: 180px;
+        @media screen and (max-width: 567px){
+          width: 137px;
+        }
+      }
+    }
+  }
+}

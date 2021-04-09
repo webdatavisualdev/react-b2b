@@ -1,0 +1,60 @@
+@import "styles";
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: inherit;
+  }
+  &:not(.disabled) {
+    &:hover {
+      svg path {
+        fill: $primaryColor;
+      }
+    }
+  
+    .star {
+      flex: 1;
+  
+      &:hover {
+        transform: scale(1.1);
+      
+        path {
+          fill: $primaryColor;
+        }
+  
+        & ~ svg path {
+          fill: $grayColor;
+        }
+      }
+    }
+  }
+
+  .star {
+    flex: 1;
+  }
+
+  .count {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 1px 0 0 10px;
+    color: $primaryColor;
+  }
+
+  .simplenightIcon {
+    margin: 0 10px 0 40px;
+    display: flex;
+  }
+
+  .textRating {
+    color: $primaryColor;
+    margin-right: 10px;
+
+    .ratingValue {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "styles";
+
+.root {
+  border: 1px solid $borderGrayColor;
+
+  .header {
+    background-color: $bgLightGrayColor;
+    padding: 30px 40px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .form {
+    padding: 40px;
+    @media (max-width: $bp-mobile) {
+      padding: 20px;
+    }
+  }
+  .info {
+    padding: 10px 20px;
+    background-color: $bgLightGrayColor;
+    border: 1px solid $borderGrayColor;
+    @media (max-width: $bp-mobile) {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .infoLeft {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      @media (max-width: $bp-mobile) {
+        label {
+          color: #003398;
+          font-weight: bold;
+        }
+      }
+    }
+    .infoRight {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      span {
+        font-weight: bold;
+      }
+      @media (max-width: $bp-mobile) {
+        margin-top: 10px;
+        span {
+          color: #7b7c7e;
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+      .infoIcon {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        @media (max-width: $bp-mobile) {
+          width: 80px;
+          height: 80px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

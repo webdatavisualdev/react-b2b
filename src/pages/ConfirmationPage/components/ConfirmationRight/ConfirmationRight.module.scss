@@ -1,0 +1,68 @@
+@import "styles";
+
+.item {
+  padding: 10px;
+  border-bottom: 1px solid $borderGrayColor;
+  .topText {
+    font-size: 26px;
+    font-weight: 100;
+  }
+  .bottomRow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .bottomLeft {
+      font-weight: 600;
+    }
+    .bottomRight {
+      color: $primaryColor;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+.noBorder {
+  border: none;
+}
+
+.priceSummary {
+  padding: 20px;
+  border: 1px solid $borderGrayColor;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .leftText {
+      font-size: 26px;
+      font-weight: 100;
+    }
+    .rightText {
+      color: $primaryColor;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+.orderTotal {
+  padding: 20px;
+  background-color: $primaryColor;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .leftText {
+      font-size: 26px;
+      font-weight: 100;
+      color: white;
+      font-weight: 600;
+    }
+    .rightText {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "styles";
+
+.root {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  > span {
+    border-radius: 24px;
+    height: 24px;
+    background: $primaryLightColor;
+    color: $primaryColor;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+
+    > span {
+      margin-left: 5px;
+    }
+    > svg {
+      width: 15px;
+    }
+
+    &.withIcon {
+      color: white;
+    }
+    &.iconOnly {
+      width: 24px;
+      position: relative;
+
+      > svg {
+        position: absolute;
+        left: 3px;
+        top: 3px;
+      }
+    }
+  }
+}

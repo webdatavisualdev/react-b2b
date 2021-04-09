@@ -1,0 +1,47 @@
+@import "styles";
+
+:global(::selection) {
+  background: $primaryColor;
+}
+
+.root {
+  position: relative;
+  width: 100%;
+
+  :global(.ant-select) {
+    width: 100%;
+  }
+  :global(.ant-select-arrow) {
+    display: none;
+  }
+  :global(.ant-select),
+  :global(.ant-select-selector) {
+    height: 36px !important;
+
+    input {
+      height: 36px;
+    }
+  }
+  :global(.ant-select-selection-item) {
+    line-height: 36px !important;
+  }
+  :global(.ant-select.ant-select-focused .ant-select-selector) {
+    border-color: $primaryColor !important;
+    box-shadow: $primaryFocusBoxShadow !important;
+  }
+  :global(.ant-select:not(.ant-select-disabled):hover .ant-select-selector) {
+    border-color: $primaryColor;
+  }
+  :global(.ant-select-item-option-active) {
+    background-color: $primaryLightColor !important;
+  }
+  .arrowDown {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    
+    path {
+      stroke: $primaryColor;
+    }
+  }
+}

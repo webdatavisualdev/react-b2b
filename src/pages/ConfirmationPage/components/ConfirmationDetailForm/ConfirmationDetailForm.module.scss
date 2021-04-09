@@ -1,0 +1,40 @@
+@import "styles";
+
+.collapseContainer {
+  margin-top: 10px;
+  border-top: 1px solid $borderGrayColor;
+}
+.collapseMain {
+  .confirmation {
+    margin-left: 30px;
+    font-size: 16px;
+    color: $primaryColor;
+  }
+  .dateRow {
+    display: flex;
+    margin-top: 10px;
+    .endDate {
+      margin-left: 40px;
+    }
+    .dateText {
+      font-weight: 600;
+      margin-left: 15px;
+    }
+  }
+  .otherRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    .leftRow {
+      display: flex;
+      .label {
+        font-weight: 600;
+        margin-left: 15px;
+      }
+    }
+    .rightText {
+      color: $primaryColor;
+      font-weight: 600;
+    }
+  }
+}

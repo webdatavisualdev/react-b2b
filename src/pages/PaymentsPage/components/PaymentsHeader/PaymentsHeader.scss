@@ -1,0 +1,75 @@
+@import "styles";
+
+.payment-header-root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  > span {
+    font-size: 48px;
+    font-weight: 300;
+  }
+  @media (max-width: $bp-mobile) {
+    > span {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  .steps {
+    max-width: 460px;
+    width: 100%;
+    .ant-steps-item-icon {
+      margin-left: 45px;
+    }
+    .ant-steps-item-content {
+      @media screen and (max-width: 480px) {
+        width: max-content;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      justify-content: unset;
+      width: 180px;
+    }
+  }
+}
+
+.ant-steps {
+  .ant-steps-item {
+    &.step-2 {
+      .ant-steps-item-container {
+        .ant-steps-item-icon {
+          margin-left: 25px;
+        }
+        .ant-steps-item-content {
+          width: max-content;
+        }
+      }
+    }
+    &.step-1 {
+      margin-left: 20px;
+    }
+    .ant-steps-item-container {
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+      .ant-steps-item-tail {
+        @media screen and (max-width: 768px) {
+          margin-left: 50px;
+        }
+        &:after {
+          @media screen and (max-width: 480px) {
+            margin-left: 0;
+            width: calc(100% - 40px);
+          }
+        }
+      }
+      .ant-steps-item-icon {
+        @media screen and (max-width: 480px) {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

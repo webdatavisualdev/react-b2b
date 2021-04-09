@@ -1,0 +1,143 @@
+@import "styles";
+
+.root {
+  padding: 13px 0;
+  border-bottom: 1px solid $borderGrayColor;
+  position: relative;
+
+  &:last-child {
+    border: none;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      padding-right: 6px;
+
+      .ellipsis {
+        position: absolute;
+        right: 0;
+      }
+
+      &:last-child {
+        color: $primaryColor;
+        cursor: pointer;
+      }
+    }
+    .icon {
+      width: 13px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .headIcon {
+      margin-left: -6px;
+      height: 40px;
+      width: 40px;
+      min-width: 40px;
+      svg {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 12px;
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      width: 100%;
+      > span {
+        font-weight: bold;
+        margin-left: 10px;
+      }
+    }
+    > span {
+      &:first-child {
+        margin-right: 10px;
+      }
+      &:last-child {
+        color: $primaryColor;
+        cursor: pointer;
+      }
+    }
+
+    &.large {
+      > div {
+        path, circle {
+          fill: white;
+        }
+        > span {
+          font-weight: 300;
+          line-height: 26px;
+          font-size: 16px !important;
+        }
+        > div {
+          border-radius: 50%;
+          background-color: $primaryColor;
+        }
+      }
+      span {
+        font-size: 24px;
+      }
+    }
+
+    .actionBar {
+      width: auto;
+      height: 30px;
+      border-radius: 3px !important;
+      box-shadow: 0 3px 6px 0 $primaryLightColor;
+      border: solid 1px $borderGrayColor;
+      background-color: white !important;
+      position: absolute;
+      right: 0;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      span, img, svg {
+        margin: 0 5px 0 5px;
+      }
+      .close {
+        font-size: 16px;
+        margin-top: -3px;
+      }
+      .icon {
+        width: 24px;
+        display: flex;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          path {
+            fill: $grayColor;
+          }
+        }
+      }
+    }
+
+    .roomDescription {
+      display: flex;
+      width: 100%;
+      margin-left: 10px;
+      justify-content: space-between;
+      .totalNight {
+        flex: 3;
+      }
+      .total {
+        color: $primaryColor;
+        bottom: 20px;
+        right: 0;
+        font-size: 20px;
+        font-weight: bold;
+        flex: 1;
+        text-align: end;
+      }
+    }
+  }
+}

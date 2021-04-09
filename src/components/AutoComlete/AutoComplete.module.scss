@@ -1,0 +1,25 @@
+.autoComplete {
+  width: 150px;
+  margin-right: 20px !important;
+  @media screen and (max-width: 547px){
+    width: 100%;
+  }
+}
+
+
+:global {
+  body {
+    .ant-picker-range-wrapper{
+      .ant-picker-panel-container {
+        .ant-picker-panels {
+          @media screen and (max-width: 567px) {
+            flex-wrap: wrap;
+          }
+        }
+      }
+      @media screen and (max-width: 567px) {
+        max-width: 280px;
+      }
+    }
+  }
+}

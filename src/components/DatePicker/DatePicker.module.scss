@@ -1,0 +1,10 @@
+@import "styles";
+
+.root {
+  height: 36px;
+}
+
+:global(.ant-picker-focused) {
+  border-color: $primaryColor !important;
+  box-shadow: $primaryFocusBoxShadow !important;
+}

@@ -1,0 +1,36 @@
+@import "styles";
+
+.root {
+  margin-top: 20px;
+  padding: 10px;
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+    .leftRow {
+      display: flex;
+      align-items: center;
+      .leftIcon {
+        background-color: $primaryColor;
+        padding: 15px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .leftText {
+        font-size: 45px;
+        font-weight: 100;
+        margin-left: 20px;
+      }
+    }
+  }
+}

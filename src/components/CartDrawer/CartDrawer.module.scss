@@ -1,0 +1,16 @@
+.cartDrawer :global .ant-drawer-content-wrapper {
+  width: 315px !important;
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+  .ant-drawer-content {
+    .ant-drawer-wrapper-body {
+      .ant-drawer-body {
+        padding: 0 !important;
+      }
+      .ant-drawer-close {
+        margin-right: 0;
+      }
+    }
+  }
+}

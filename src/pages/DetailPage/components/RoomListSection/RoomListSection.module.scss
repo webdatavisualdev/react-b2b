@@ -1,0 +1,27 @@
+@import "styles";
+
+.root {
+  .detailHeader {
+    margin-bottom: 50px;
+
+    @media (max-width: $bp-mobile) {
+      justify-content: center;
+      padding: 20px;
+    }
+  }
+  .collapse {
+    margin: 10px 0;
+  }
+  .tabPane {
+    @media (max-width: $bp-mobile) {
+      padding: 20px;
+    }
+  }
+}
+.amenities {
+  padding: 0 20px;
+  .amenitiesWrapper {
+    font-size: 24px;
+    color: #013398;
+  }
+}

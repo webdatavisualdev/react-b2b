@@ -1,0 +1,53 @@
+@import "styles";
+
+.root {
+  flex: 1;
+  position: relative;
+
+  input {
+    height: 26px;
+  }
+  &.large {
+    input {
+      height: 36px;
+    }
+  }
+  .required {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    color: $primaryColor;
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .noForm {
+    :global(.ant-form-item-control),
+    input {
+      display: none;
+    }
+    :global(.ant-form-item) {
+      margin-bottom: 0;
+    }
+  }
+
+  :global(.ant-form-item-control-input-content) {
+    display: flex;
+    flex-direction: row;
+
+    :global(.ant-input-affix-wrapper) {
+      flex: 1;
+      color: $primaryColor !important;
+      text-transform: uppercase;
+    }
+  }
+  :global(.ant-form-item-label > label) {
+    font-weight: bold;
+    color: $primaryColor !important;
+    text-transform: uppercase;
+  }
+  :global(.ant-form-item-label > label.ant-form-item-required::before) {
+    display: none;
+  }
+}

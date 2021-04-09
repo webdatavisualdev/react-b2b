@@ -1,0 +1,28 @@
+@import "styles";
+
+.root {
+  display: table !important;
+  width: auto !important;
+  border-radius: 8px;
+  border: 2px solid $primaryColor;
+
+  button {
+    width: 35px;
+    padding: 2px !important;
+    background-color: $primaryColor;
+    border: none;
+
+    &:hover {
+      background-color: $primaryHoverColor;
+    }
+    &:focus {
+      background-color: $primaryColor;
+    }
+  }
+  input {
+    width: 50px !important;
+    text-align: center !important;
+    color: $primaryColor;
+    font-weight: bold;
+  }
+}

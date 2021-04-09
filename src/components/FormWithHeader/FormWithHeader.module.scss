@@ -1,0 +1,25 @@
+@import "styles";
+
+.root {
+  border: 1px solid $borderGrayColor;
+  margin-bottom: 30px;
+  .header {
+    background-color: $bgLightGrayColor;
+    padding: 20px 15px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .leftText {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .rightText {
+      font-size: 18px;
+      color: $primaryColor;
+    }
+  }
+  .main {
+    padding: 20px 15px;
+    background-color: white;
+  }
+}

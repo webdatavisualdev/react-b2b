@@ -1,0 +1,26 @@
+@import 'styles';
+
+.container {
+  margin-bottom: 30px;
+
+  .radio {
+    width: 100%;
+    display: flex;
+
+    :global(.ant-radio-button-wrapper) {
+      width: 14.28%;
+      display: flex;
+      justify-content: center;
+      color: $grayColor;
+
+      &:hover {
+        color: $grayColor;
+      }
+    }
+  
+    :global(.ant-radio-button-wrapper-checked) {
+      background-color: $primaryColor !important;
+      border-color: $primaryColor !important;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import "styles";
+
+.root {
+  .tabs {
+    &:global(.ant-tabs) {
+      :global(.ant-tabs-nav) {
+        &:before {
+          border-bottom-width: 4px;
+          border-bottom-color: $borderGrayColor;
+          // right: 100px;
+        }
+
+        :global(.ant-tabs-tab) {
+          padding: 0 20px 20px 20px;
+
+          :global(.ant-tabs-tab-btn) {
+            color: $grayColor;
+            line-height: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+
+          &:global(.ant-tabs-tab-active) {
+            :global(.ant-tabs-tab-btn) {
+              color: $primaryColor;
+            }
+          }
+        }
+
+        :global(.ant-tabs-ink-bar) {
+          height: 4px;
+          background: $primaryColor;
+        }
+      }
+    }
+  }
+}

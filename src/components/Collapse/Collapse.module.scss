@@ -1,0 +1,90 @@
+@import "styles";
+
+:global {
+  .ant-collapse {
+    &.large {
+      .ant-collapse-header {
+        font-size: 24px;
+        font-weight: 300;
+      }
+      .ant-collapse-item-active .ant-collapse-header {
+        color: $grayColor !important;
+      }
+    }
+
+    .ant-collapse-item,
+    .ant-collapse-content {
+      border: none !important;
+    }
+    .ant-collapse-content-box {
+      padding: 5px 0 !important;
+    }
+    .ant-collapse-header {
+      background: $primaryColor;
+      color: white !important;
+      padding-right: 5px !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+      text-transform: uppercase;
+      padding: 4px 10px !important;
+      font-weight: bold;
+
+      &:after, &:before {
+        display: none !important;
+      }
+
+      span {
+        position: inherit !important;
+        transform: inherit !important;
+        right: 0 !important;
+        left: 0 !important;
+      }
+    }
+    .ant-collapse-item-active {
+      .ant-collapse-header {
+        padding-left: 0 !important;
+        background: white;
+        color: $primaryColor !important;
+
+        svg {
+          color: $primaryColor;
+        }
+      }
+    }
+    .ant-collapse-item-active .ant-collapse-arrow {
+      transform: rotate(180deg) !important;
+
+      > svg path {
+        stroke: $primaryColor !important
+      }
+    }
+    &.invert {
+      .ant-collapse-header {
+        background: white;
+        color: $primaryColor !important;
+        padding: 4px 0px !important;
+      }
+      .ant-collapse-item .ant-collapse-arrow {
+        >svg path {
+          stroke: $primaryColor !important;
+        }
+      }
+    }
+  }
+}
+
+.root {
+  width: 100%;
+  border: none !important;
+
+  .arrow {
+    color: white;
+    font-size: 14px;
+
+    &:before {
+      display: inline-block;
+    }
+  }
+}

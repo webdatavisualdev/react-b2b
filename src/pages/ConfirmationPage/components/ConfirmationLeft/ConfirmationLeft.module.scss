@@ -1,0 +1,19 @@
+@import "styles";
+
+.infoContainer {
+  margin-top: 20px;
+  border: 1px solid $borderGrayColor;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 10px;
+  }
+}
+.hotelDetail {
+  font-size: 16px;
+}
+.lastHotelDetail {
+  font-size: 16px;
+  margin-bottom: 20px;
+}

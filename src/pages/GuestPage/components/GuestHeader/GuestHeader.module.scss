@@ -1,0 +1,54 @@
+@import "styles";
+
+.root {
+  background-color: $bgLightGrayColor;
+  padding: 0 12px;
+  .container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 20px 0px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > span {
+      font-size: 48px;
+      font-weight: 300;
+    }
+    .steps {
+      max-width: 460px;
+    }
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .root {
+    .container {
+      font-size: 24px;
+      font-weight: 600;
+      color: #7b7c7e;
+      //flex-wrap: wrap;
+      //justify-content: center;
+      > span {
+        font-size: 24px;
+        font-weight: 600;
+        //width: 160px;
+        overflow: hidden;
+        white-space: nowrap;
+        color: $grayColor;
+      }
+      .steps {
+        width: 40%;
+        .ant-steps-item {
+          color: red;
+        }
+      }
+    }
+  }
+  .ant-steps {
+    .ant-steps-item {
+      color: red;
+    }
+  }
+}

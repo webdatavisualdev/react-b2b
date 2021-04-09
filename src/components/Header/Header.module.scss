@@ -1,0 +1,59 @@
+@import "styles";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bgGrayColor;
+  height: 80px;
+  padding: 20px 30px;
+  color: $primaryColor;
+  font-weight: bold;
+  font-size: 20px;
+
+  @media (max-width: $bp-mobile) {
+    height: 100px;
+    padding: 10px 15px;
+  }
+  @media (min-width: $bp-mobile) {
+    .menubtn {
+      display: none;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    .logo {
+      .logoImage {
+        max-width: 236px;
+        @media (max-width: $bp-mobile){
+          max-width: 200px;
+        }
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      margin-block-start: 0;
+      margin-block-end: 0;
+
+      .menuItem {
+        margin-left: 50px;
+        list-style-type: none;
+      }
+    }
+    .cartWrapper {
+      position: relative;
+      p {
+        position: absolute;
+        top: -7px;
+        left: 15px;
+      }
+    }
+  }
+}

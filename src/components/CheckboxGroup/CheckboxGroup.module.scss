@@ -1,0 +1,55 @@
+@import "styles";
+
+.root {
+  :global(.ant-checkbox-checked .ant-checkbox-inner),
+  :global(.ant-checkbox .ant-checkbox-inner) {
+    width: 24px;
+    height: 24px;
+
+    &::after {
+      transform: rotate(45deg) scale(1.5) translate(-50%, -50%);
+      top: 12px;
+      left: 5px;
+    }
+  }
+  &.large {
+    :global(.ant-checkbox-checked .ant-checkbox-inner),
+    :global(.ant-checkbox .ant-checkbox-inner) {
+      width: 30px;
+      height: 30px;
+
+      &::after {
+        transform: rotate(45deg) scale(1.8) translate(-50%, -50%);
+        top: 15px;
+        left: 8px;
+      }
+    }
+  }
+
+  :global(.ant-checkbox-checked .ant-checkbox-inner) {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+  }
+
+  &.invert {
+    :global(.ant-checkbox .ant-checkbox-inner) {
+      background-color: white;
+      border: 2px solid $primaryColor;
+
+      &::after {
+        border-color: $primaryColor;
+      }
+    }
+  }
+
+  &.reverse {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  :global(.ant-checkbox-group-item) {
+    margin: 5px 0;
+    display: block;
+  }
+}

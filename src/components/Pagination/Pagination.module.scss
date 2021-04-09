@@ -1,0 +1,75 @@
+@import "styles";
+
+.root {
+  position: relative;
+  width: 100%;
+
+  :global(.ant-pagination-item) {
+    border-width: 0;
+
+    &:hover, &:focus {
+      a {
+        color: $primaryColor;
+      }
+    }
+
+    a {
+      color: $grayColor;
+    }
+  }
+
+  :global(.ant-pagination-item-active) {
+    a {
+      color: $primaryColor;
+    }
+
+    &:focus {
+      a {
+        color: $primaryColor;
+      }
+    }
+  }
+
+  :global(.ant-pagination-next),
+  :global(.ant-pagination-prev) {
+    button {
+      background-color: $primaryColor;
+      color: white;
+      border-color: $primaryColor;
+    }
+
+    &:hover, &:focus {
+      button {
+        color: white;
+      }
+    }
+
+    &:global(.ant-pagination-disabled) {
+      button {
+        background-color: white;
+        color: $borderGrayColor;
+        border-color: $borderGrayColor;
+      }
+    }
+  }
+
+  :global(.ant-pagination-options-size-changer) {
+    &:global(.ant-select:not(.ant-select-disabled)):hover, 
+    &:global(.ant-select-focused.ant-select-single:not(.ant-select-customize-input)) {
+      :global(.ant-select-selector) {
+        border-color: $primaryColor;
+      }
+    }
+  }
+  // :global(.ant-pagination-options-size-changer:hover .ant-select-selector) {
+  //   border-color: $primaryColor;
+  // }
+
+  :global(.ant-pagination-options-quick-jumper) {
+    input {
+      &:hover, &:focus {
+        border-color: $primaryColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import "styles";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 460px;
+    .img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .orderTextRow {
+      display: flex;
+      align-items: center;
+      z-index: 5;
+      margin-bottom: 50px;
+      @media (max-width: $bp-mobile) {
+        flex-direction: column;
+      }
+      .searchIconWrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        .searchIcon {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .orderText {
+        font-size: 48px;
+        color: white;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        text-align: center;
+        padding: 0px 20px;
+        @media (max-width: $bp-mobile) {
+          font-size: 30px;
+        }
+      }
+    }
+    .errorText {
+      z-index: 5;
+      position: absolute;
+      top: 0;
+      background: #b94b18AA;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+    .orderInput {
+      width: 540px;
+      margin-bottom: 30px;
+      @media (max-width: $bp-mobile) {
+        width: 80%;
+      }
+      .orderRightText {
+        font-size: 25px;
+        color: $primaryColor;
+        font-weight: bold;
+      }
+      .rightIconWrapper {
+        margin-top: 10px;
+        .userIcon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .orderSearchButton {
+      width: 200px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255,255,255,0.8);
+      .searchIconWrapper {
+        margin-top: 5px;
+        .orderSearchIcon {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+        }
+      }
+      .orderSearchText {
+        color: $primaryColor;
+        font-size: 20px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,180 @@
+.topFilter {
+  padding-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  .display {
+    display: flex;
+
+    :global(.ant-select-selector) {
+      min-width: 150px;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      margin-top: 10px;
+      &.inEdit {
+        flex-wrap: wrap;
+
+        .item {
+          width: 100%;
+
+          > div {
+            width: 100%;
+
+            .ant-select-auto-complete {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .displayDate {
+    display: flex;
+    flex-direction: row-reverse;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+
+  .displayCount {
+    display: flex;
+    @media screen and (max-width: 767px) {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      flex: 0.5;
+      div {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 468px) {
+      flex-direction: column;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 300;
+
+    &.noMargin {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-top: 8px;
+      margin-right: 10px;
+    }
+    @media screen and (max-width: 548px) {
+      width: 100%;
+    }
+
+    &.rangePicker {
+      width: 250px;
+    }
+    .item {
+      font-family: Lato;
+      display: flex;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #003398;
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 10px;
+      }
+    }
+
+    .padding5 {
+      padding-left: 5px;
+
+      @media screen and (max-width: 767px) {
+        max-width: 20px;
+      }
+    }
+  }
+
+  .roomsAndPeople {
+    display: flex;
+  }
+
+  .currency {
+    width: 100px;
+
+  }
+  @media screen and (max-width: 1012px) {
+    .currency {
+      margin-left: 16px;
+      margin-top: 10px;
+      width: 150px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 10px;
+    .currency {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  :global{
+    .ant-picker.ant-picker-borderless{
+      min-width: 220px;
+    }
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    background-color: #c6d7ed;
+    text-align: center;
+    color: #003398;
+    font-weight: bold;
+    border: none;
+    margin: 0 5px;
+    width: 64px;
+    height: 24px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      /* position: absolute;
+       right: 0;
+       bottom: -15px;*/
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+}
+
+.img {
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+}

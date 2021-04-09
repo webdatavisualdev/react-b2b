@@ -1,0 +1,118 @@
+@import "styles";
+
+.root {
+  border: 1px solid $borderGrayColor;
+  @media screen and (max-width: 767px) {
+    padding: 0 16px;
+  }
+  .header {
+    background-color: $bgLightGrayColor;
+    padding: 0px 0px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      display: flex;
+    }
+    :global(.ant-checkbox-wrapper) {
+      margin-right: 40px;
+      min-width: 170px;
+
+      @media screen and (max-width: 767px) {
+        margin: 10px 0px 0px 0px;
+      }
+    }
+    :global(.ant-checkbox-wrapper > span) {
+      color: $primaryColor;
+    }
+
+    .leftHeader {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .imgContainer {
+        position: relative;
+        max-width: 110px;
+        margin-right: 30px;
+        .image {
+          max-width: 110px;
+          max-height: 85px;
+          width:auto;
+          height:auto;
+          margin-right: 30px;
+          object-fit: contain;
+          image-rendering: pixelated;
+        }
+        .iconWrapper {
+          border-radius: 20px;
+          background-color: $primaryColor;
+          border: 2px solid white;
+          position: absolute;
+          right: -18px;
+          top: calc(50% - 18px);
+          width: 36px;
+          height: 36px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            path, circle {
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .form {
+    padding: 20px 40px;
+    .additionalContainer {
+      display: flex;
+      flex-direction: row;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+      .additionalText {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      .linkText {
+        color: $primaryColor;
+        margin-left: 20px;
+      }
+    }
+    .addContactText {
+      font-size: 24px;
+      font-weight: 200;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .info {
+    padding: 10px 20px;
+    background-color: $bgLightGrayColor;
+    border: 1px solid $borderGrayColor;
+
+    .infoLeft {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .infoRight {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .infoIcon {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

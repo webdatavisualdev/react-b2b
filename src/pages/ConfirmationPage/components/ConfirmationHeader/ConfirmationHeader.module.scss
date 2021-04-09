@@ -1,0 +1,78 @@
+@import "styles";
+
+.root {
+  background-color: $bgLightGrayColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  .main {
+    max-width: 1140px;
+    width: 100%;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    .left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .tick {
+        background-color: $primaryColor;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        margin-right: 15px;
+        font-size: 30px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 480px) {
+          margin: 0 auto;
+        }
+      }
+      > span {
+        font-size: 48px;
+        font-weight: 300;
+        @media screen and (max-width: 480px) {
+          font-size: 36px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .item {
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-end;
+        align-items: flex-end;
+        .label {
+          color: $grayColor;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .value {
+          color: $primaryColor;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+      .button {
+        margin-left: 40px;
+        button {
+          >div {
+            padding: 5px 0px;
+          }
+        }
+      }
+    }
+  }
+}

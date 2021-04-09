@@ -1,0 +1,18 @@
+@import "styles";
+
+.iconButton {
+  font-size: 12px;
+  font-weight: bold;
+  background-color: white;
+  color: $primaryColor;
+  border: 2px solid $primaryColor;
+  padding: 5px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+
+  > svg {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
+}

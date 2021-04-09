@@ -1,0 +1,17 @@
+@import "styles";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  .main {
+    margin-top: 60px;
+    max-width: 1150px;
+    width: 100%;
+    @media (max-width: $bp-mobile) {
+      width: 90%;
+    }
+  }
+}

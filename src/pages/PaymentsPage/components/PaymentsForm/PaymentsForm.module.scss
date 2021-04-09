@@ -1,0 +1,154 @@
+@import "styles";
+
+.root {
+  width: 100%;
+  border: 1px solid $borderGrayColor;
+  padding: 30px 20px;
+
+  .title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    @media (max-width: $bp-mobile) {
+      color: $primaryColor;
+    }
+  }
+  .providers {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: auto auto auto auto;
+    margin-bottom: 30px;
+    @media screen and (max-width: 520px){
+      grid-column-gap: 10px;
+    }
+    @media screen and (max-width: 480px){
+      grid-template-columns: auto auto ;
+    }
+
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 7px;
+      border: solid 2px $borderGrayColor;
+      margin-bottom: 20px;
+      cursor: pointer;
+
+      &.active {
+        background: rgba(0, 51, 152, 0.1);
+        border-color: $primaryColor;
+        color: $primaryColor;
+      }
+      &.disabled {
+        background: $borderGrayColor;
+        cursor: default;
+      }
+
+      img {
+        width: 100px;
+        height: 30px;
+        object-fit: contain;
+      }
+    }
+  }
+  .form {
+    margin-bottom: 40px;
+
+    :global(.ant-form-item-label > label) {
+      text-transform: none;
+      color: #7b7c7e !important;
+    }
+
+    > div {
+      width: 100%;
+      display: flex;
+
+      .cvvWrapper {
+        display: inline-flex;
+        flex: 1;
+
+        & > div:first-child {
+          margin-right: 40px;
+        }
+      }
+
+      .stField.error {
+        border-color: red;
+      }
+    }
+
+    :global(.StripeElement) {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid $borderGrayColor;
+      border-radius: 2px;
+    }
+    :global(.StripeElement--focus) {
+      border-color: $primaryColor;
+    }
+    :global(.StripeElement--invalid) {
+      border-color: red;
+    }
+    .leftItem {
+      margin-right: 40px;
+      @media screen and (max-width: 767px) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: $bp-mobile) {
+      margin-bottom: 0;
+      > div {
+        .cvvWrapper {
+          & > div:first-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .saveInfo {
+    padding: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $borderGrayColor;
+
+    > label {
+      flex: 1;
+      margin-right: 40px;
+
+      > span:last-child {
+        color: $primaryColor;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    > div {
+      flex: 1;
+    }
+    @media (max-width: $bp-mobile) {
+      flex-direction: column;
+      box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.03);
+
+      > label {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .cardNumber {
+    img {
+      position: absolute;
+      width: 40px;
+      top: 35px;
+      right: 5px;
+    }
+  }
+  .margin {
+    margin-bottom: 20px;
+  }
+}

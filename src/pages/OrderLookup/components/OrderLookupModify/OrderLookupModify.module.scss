@@ -1,0 +1,100 @@
+@import "styles";
+
+.main {
+  border: solid 1px #dedede;
+  height: 325px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media (max-width: $bp-mobile) {
+    height: inherit;
+    padding: 30px 10px;
+  }
+  .topText {
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.42;
+    letter-spacing: normal;
+    color: $grayColor;
+  }
+  .description {
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: $grayColor;
+    @media (max-width: $bp-mobile) {
+      width: 80%;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+  .orderRow {
+    width: 100%;
+    display: flex;
+    @media (max-width: $bp-mobile) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .eachItem {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      @media (max-width: $bp-mobile) {
+        width: 80%;
+        margin-top: 20px;
+
+      }
+      .iconWrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: $primaryColor;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        .icon {
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .phoneText {
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.42;
+        letter-spacing: normal;
+        text-align: center;
+        color: $primaryColor;
+      }
+      .borderRight {
+        border-right: solid 1px #dedede;
+        height: 110px;
+        width: 1px;
+        position: absolute;
+        right: 0;
+
+        @media (max-width: $bp-mobile) {
+          width: 0px;
+          border-right-width: 0px;
+        }
+      }
+    }
+  }
+}
